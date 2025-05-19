@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio professionnel - À propos</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    article {
+      background-color: #fff;
+      padding: 30px;
+    }
+    p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="tete">
+      <h1>Sidiki Sogodogo</h1>
+      <div id="menuToggle" class="menuToggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <nav id="navig">
+      <ul>
+        <li><a target="_blank" href="index.html">Accueil</a></li>
+        <li><a target="_blank" href="apropos.html">À propos</a></li>
+        <li><a target="_blank" href="projet.html">Projets</a></li>
+        <li><a target="_blank" href="compétences.html">Compétences</a></li>
+        <li><a target="_blank" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <article>
+    <h1>À propos de moi</h1>
+    <p>Je m'appelle Sidiki Sogodogo. Je suis passionné par le numérique et la création de sites web.</p>
+    <p>J'ai suivi une formation en développement web où j'ai acquis des bases solides en HTML et CSS, et j'ai obtenu une attestation pour valider mes compétences.</p>
+    <div class="citation">
+      <p>"Le web est une toile infinie de possibilités, et j'ai à cœur d'y apporter ma contribution à travers des créations à la fois fonctionnelles et esthétiques."</p>
+    </div>
+    <p>Je souhaite maintenant mettre en pratique ce que j'ai appris en réalisant des projets concrets et en collaborant avec des professionnels. Mon ambition est de devenir un développeur web compétent, capable de créer des sites modernes, fonctionnels et accessibles à tous.</p>
+    <p>Curieux, motivé et toujours avide d'apprendre, je me forme continuellement aux nouvelles technologies et tendances du développement web.</p>
+  </article>
+  <footer>
+    <p>&copy; 2025 Sogodogo Sidiki - Tous droits réservés.</p>
+  </footer>
+  <script>
+    const menu = document.getElementById("menuToggle");
+    const nav = document.getElementById("navig");
+    
+    function toggle() {
+      nav.classList.toggle("show");
+    }
+    
+    menu.addEventListener("click", toggle);
+  </script>
+</body>
+</html>

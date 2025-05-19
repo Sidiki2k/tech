@@ -1,0 +1,267 @@
+body {
+  font-family: "Century Gothic", Calibri, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top: 100px; /* espace réservé au header fixe */
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2c3e50;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tete {
+  background-color: #3498db;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.tete h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.menuToggle {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  cursor: pointer;
+}
+
+.menuToggle div {
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Barre de navigation cachée par défaut */
+nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px; /* même hauteur que .tete */
+  right: 10px;
+  background-color: #2c3e50;
+  opacity: 0.95;
+  border-radius: 5px;
+  width: 200px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Affichage quand on clique sur le menu */
+nav.show {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+nav ul li {
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+nav ul li:hover {
+  transform: translateX(5px);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #3498db;
+}
+
+a {
+  text-decoration: none;
+  color: #3498db;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #2980b9;
+}
+
+/* Contenu principal */
+article {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+/* Grands titres */
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  color: #2c3e50;
+  font-size: 2em;
+  margin-top: 0;
+}
+
+/* Paragraphes */
+p {
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.paragphoto {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+}
+
+/* Citation */
+.citation {
+  padding-left: 15px;
+  border-left: 5px solid #3498db;
+  margin: 20px 0;
+  font-style: italic;
+  color: #555;
+}
+
+/* Pied de page */
+footer {
+  height: 70px;
+  background-color: #2c3e50;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Tableaux */
+table {
+  margin: 20px auto;
+  table-layout: fixed;
+  width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 12px;
+  border: 1px solid #eee;
+  vertical-align: top;
+}
+
+.teteTab {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Formulaires */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+button[type="submit"] {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+/* Animation bordure */
+@keyframes lumiere {
+  0% {
+    border-top: 3px solid #3498db;
+  }
+  25% {
+    border-right: 3px solid #3498db;
+  }
+  50% {
+    border-bottom: 3px solid #3498db;
+  }
+  75% {
+    border-left: 3px solid #3498db;
+  }
+  100% {
+    border-top: 3px solid #3498db;
+  }
+}
+
+/* Animation icon */
+@keyframes moov {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

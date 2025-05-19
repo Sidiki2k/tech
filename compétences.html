@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio - Compétences</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .competence-categorie {
+      margin-bottom: 30px;
+    }
+    .competence-categorie h2 {
+      color: #3498db;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+    }
+    .competence-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .competence-icon {
+      width: 50px;
+      margin-right: 15px;
+    }
+    .competence-description {
+      flex: 1;
+    }
+    .niveau {
+      height: 10px;
+      background-color: #ecf0f1;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+    .niveau-rempli {
+      height: 100%;
+      background-color: #3498db;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="tete">
+      <h1>Sidiki Sogodogo</h1>
+      <div id="menuToggle" class="menuToggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <nav id="navig">
+      <ul>
+        <li><a target="_blank" href="index.html">Accueil</a></li>
+        <li><a target="_blank" href="apropos.html">À propos</a></li>
+        <li><a target="_blank" href="projet.html">Projets</a></li>
+        <li><a target="_blank" href="compétences.html">Compétences</a></li>
+        <li><a target="_blank" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <article>
+    <h1>Mes compétences techniques</h1>
+    <p>Voici les langages, outils et technologies que je maîtrise :</p>
+    
+    <div class="competence-categorie">
+      <h2>Développement Web</h2>
+      
+      <div class="competence-item">
+        <img src="HTML-logo.png" alt="HTML5" class="competence-icon">
+        <div class="competence-description">
+          <strong>HTML5</strong>
+          <p>Structure sémantique des pages web, accessibilité, intégration de médias.</p>
+          <div class="niveau">
+            <div class="niveau-rempli" style="width: 85%;"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="competence-item">
+        <img src="CSS3_logo.png" alt="CSS3" class="competence-icon">
+        <div class="competence-description">
+          <strong>CSS3</strong>
+          <p>Mise en forme responsive, animations, flexbox, grid layout.</p>
+          <div class="niveau">
+            <div class="niveau-rempli" style="width: 80%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="competence-categorie">
+      <h2>Bureautique</h2>
+      
+      <div class="competence-item">
+        <img src="Microsoft_Word.png" alt="Word" class="competence-icon">
+        <div class="competence-description">
+          <strong>Microsoft Word</strong>
+          <p>Rédaction de documents, mise en forme avancée, création de formulaires.</p>
+          <div class="niveau">
+            <div class="niveau-rempli" style="width: 90%;"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="competence-item">
+        <img src="Microsoft_Excel.png" alt="Excel" class="competence-icon">
+        <div class="competence-description">
+          <strong>Microsoft Excel</strong>
+          <p>Gestion de données, formules, tableaux croisés dynamiques.</p>
+          <div class="niveau">
+            <div class="niveau-rempli" style="width: 85%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="citation">
+      <p>Je continue à me perfectionner et prévois d'acquérir prochainement des compétences en JavaScript et en design UX/UI pour étoffer mon panel de compétences.</p>
+    </div>
+  </article>
+  <footer>
+    <p>&copy; 2025 Sogodogo Sidiki - Tous droits réservés.</p>
+  </footer>
+  <script>
+    const menu = document.getElementById("menuToggle");
+    const nav = document.getElementById("navig");
+    
+    function toggle() {
+      nav.classList.toggle("show");
+    }
+    
+    menu.addEventListener("click", toggle);
+  </script>
+</body>
+</html>

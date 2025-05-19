@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Professionnel - Sidiki Sogodogo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #3498db, #2c3e50);
+      color: white;
+      margin-bottom: 30px;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      margin: 0 auto 20px;
+      display: block;
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    .cta-button {
+      padding: 12px 25px;
+      background-color: #fff;
+      color: #3498db;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+    .cta-button:hover {
+      background-color: #2980b9;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .cta-button.secondary {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+    .cta-button.secondary:hover {
+      background-color: white;
+      color: #3498db;
+    }
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+    .quick-link-card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    .quick-link-card:hover {
+      transform: translateY(-5px);
+    }
+    .quick-link-card h3 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+    .quick-link-icon {
+      font-size: 40px;
+      color: #3498db;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="tete">
+      <h1>Sidiki Sogodogo</h1>
+      <div id="menuToggle" class="menuToggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <nav id="navig">
+      <ul>
+        <li><a target="_blank" href="index.html">Accueil</a></li>
+        <li><a target="_blank" href="apropos.html">À propos</a></li>
+        <li><a target="_blank" href="projet.html">Projets</a></li>
+        <li><a target="_blank" href="compétences.html">Compétences</a></li>
+        <li><a target="_blank" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="my-photo.jpg" alt="Photo de Sidiki Sogodogo" class="profile-img">
+      <h1>Développeur Web Passionné</h1>
+      <p>Création de sites web modernes, accessibles et performants</p>
+      <div class="cta-buttons">
+        <a target="_blank" href="projet.html" class="cta-button">Voir mes projets</a>
+        <a target="_blank" href="contact.html" class="cta-button secondary">Me contacter</a>
+      </div>
+    </section>
+
+    <article>
+      <div class="quick-links">
+        <a target="_blank" href="apropos.html" class="quick-link-card">
+          <div class="quick-link-icon">👋</div>
+          <h3>À propos de moi</h3>
+          <p>Découvrez mon parcours, mes motivations et mes aspirations professionnelles</p>
+        </a>
+        
+        <a target="_blank" href="compétences.html" class="quick-link-card">
+          <div class="quick-link-icon">💻</div>
+          <h3>Mes compétences</h3>
+          <p>Technologies que je maîtrise et domaines d'expertise</p>
+        </a>
+        
+        <a target="_blank" href="projet.html" class="quick-link-card">
+          <div class="quick-link-icon">🚀</div>
+          <h3>Mes réalisations</h3>
+          <p>Explorez mes projets et créations récentes</p>
+        </a>
+      </div>
+
+      <div class="citation">
+        <p><em>"Créer avec simplicité, apprendre avec passion, évoluer avec persévérance."</em></p>
+      </div>
+
+      <h2>Mon Approche</h2>
+      <p>Je conçois des sites web en mettant l'accent sur :</p>
+      <ul>
+        <li><strong>L'accessibilité</strong> : des sites utilisables par tous</li>
+        <li><strong>La performance</strong> : des temps de chargement optimisés</li>
+        <li><strong>Le responsive design</strong> : une expérience adaptée à tous les appareils</li>
+        <li><strong>La simplicité</strong> : des interfaces intuitives et épurées</li>
+      </ul>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sogodogo Sidiki - Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    const menu = document.getElementById("menuToggle");
+    const nav = document.getElementById("navig");
+    
+    function toggle() {
+      nav.classList.toggle("show");
+    }
+    
+    menu.addEventListener("click", toggle);
+  </script>
+</body>
+</html>

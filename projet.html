@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio - Mes Projets</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .projets-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .projet-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .projet-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    .projet-image {
+      height: 200px;
+      background-color: #3498db;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+    }
+    .projet-content {
+      padding: 20px;
+    }
+    .projet-title {
+      margin: 0 0 10px 0;
+      color: #2c3e50;
+    }
+    .projet-description {
+      color: #666;
+      margin-bottom: 15px;
+    }
+    .projet-technos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+    .techno-tag {
+      background: #ecf0f1;
+      color: #3498db;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .projet-link {
+      display: inline-block;
+      background: #3498db;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .projet-link:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="tete">
+      <h1>Sidiki Sogodogo</h1>
+      <div id="menuToggle" class="menuToggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <nav id="navig">
+      <ul>
+        <li><a target="_blank" href="index.html">Accueil</a></li>
+        <li><a target="_blank" href="apropos.html">À propos</a></li>
+        <li><a target="_blank" href="projet.html">Projets</a></li>
+        <li><a target="_blank" href="compétences.html">Compétences</a></li>
+        <li><a target="_blank" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <article>
+    <h1>Mes Projets Récents</h1>
+    <p>Découvrez une sélection de mes réalisations, reflets de mes compétences et de ma passion pour le développement web.</p>
+    
+    <div class="projets-container">
+      <div class="projet-card">
+        <div class="projet-image" style="background-color: #3498db;">
+          Portfolio
+        </div>
+        <div class="projet-content">
+          <h3 class="projet-title">Mon Portfolio</h3>
+          <p class="projet-description">Conception et développement de mon portfolio professionnel pour présenter mes compétences et projets.</p>
+          <div class="projet-technos">
+            <span class="techno-tag">HTML5</span>
+            <span class="techno-tag">CSS3</span>
+            <span class="techno-tag">Responsive Design</span>
+          </div>
+          <a href="#" class="projet-link">Voir le projet</a>
+        </div>
+      </div>
+      
+      <div class="projet-card">
+        <div class="projet-image" style="background-color: #2ecc71;">
+          Site Vitrine
+        </div>
+        <div class="projet-content">
+          <h3 class="projet-title">Site Vitrine pour PME</h3>
+          <p class="projet-description">Réalisation d'un site vitrine responsive pour une petite entreprise locale.</p>
+          <div class="projet-technos">
+            <span class="techno-tag">HTML5</span>
+            <span class="techno-tag">CSS3</span>
+            <span class="techno-tag">JavaScript</span>
+          </div>
+          <a href="#" class="projet-link">Voir le projet</a>
+        </div>
+      </div>
+      
+      <div class="projet-card">
+        <div class="projet-image" style="background-color: #e74c3c;">
+          Application
+        </div>
+        <div class="projet-content">
+          <h3 class="projet-title">Application de Gestion</h3>
+          <p class="projet-description">Développement d'une interface de gestion de stock avec Excel et macros VBA.</p>
+          <div class="projet-technos">
+            <span class="techno-tag">Excel</span>
+            <span class="techno-tag">VBA</span>
+            <span class="techno-tag">Formules avancées</span>
+          </div>
+          <a href="#" class="projet-link">Voir le projet</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="citation" style="margin-top: 40px;">
+      <p>Chaque projet est une nouvelle opportunité d'apprendre, de progresser et de repousser mes limites.</p>
+    </div>
+  </article>
+  <footer>
+    <p>&copy; 2025 Sogodogo Sidiki - Tous droits réservés.</p>
+  </footer>
+  <script>
+    const menu = document.getElementById("menuToggle");
+    const nav = document.getElementById("navig");
+    
+    function toggle() {
+      nav.classList.toggle("show");
+    }
+    
+    menu.addEventListener("click", toggle);
+  </script>
+</body>
+</html>
