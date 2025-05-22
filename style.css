@@ -45,6 +45,7 @@ header {
   background-color: #fff;
   margin: 4px 0;
   transition: 0.3s;
+  border-radius: 3px;
 }
 
 /* Barre de navigation cachée par défaut */
